@@ -2,9 +2,9 @@
 
 ## Install Dependencies
 
-install build-essential, cmake, git, libevent-dev, libboost-all-dev, libpcap-dev, libssl-dev
+install build-essential, cmake, git, libevent-dev, libboost-all-dev, libpcap-dev
 
-    $ sudo apt-get install build-essential cmake git libevent-dev libboost-all-dev libpcap-dev libssl-dev
+    $ sudo apt-get install build-essential cmake git libevent-dev libboost-all-dev libpcap-dev
 
 ## Build and Run Flow Abstractor
 
