@@ -67,3 +67,26 @@ and run by using leiningen.
     $ cd protocol-parser/http
     $ lein deps
     $ lein run [path_to_unix_domain_socket]
+
+## Save Result into MongoDB
+
+install dependencies
+
+    $ sudo apt-get install mongodb nodejs
+    $ sudo npm install mongodb
+
+run HTTP parser, and redirect to node.js
+
+    $ cd protocol-parser/http
+    $ lein run | node ../jstore/jstore.js test_db http
+
+show result
+
+    $ mongo
+    > use test_db
+    > db.http.find()
+
+of course, DNS parser's output can be stored into MongoDB
+
+    $ cd protocol-parser/dns
+    $ ./stap_dns -j | node ../jstore/jstore.js test_db dns
