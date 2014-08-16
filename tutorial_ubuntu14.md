@@ -40,7 +40,7 @@ clone protocol-parser from GitHub
 
     $ git clone https://github.com/stap-project/protocol-parser.git
 
-### Build
+### Build and Run DNS Parser
 
 build by cmake and make
 
@@ -48,6 +48,22 @@ build by cmake and make
     $ cmake -DCMAKE_BUILD_TYPE=Release CMakeLists.txt
     $ make
 
-### Run
+and run.
 
-    $ sudo ./stap_dns
+    $ sudo ./stap_dns -j
+
+### Build and Run HTTP Parser
+
+install dependencies
+
+    $ sudo apt-get install leiningen maven
+    $ cd protocol-parser/javaclass
+    $ ./install.sh
+    $ sudo mkdir -p /opt/newsclub/lib-native
+    $ sudo cp linux/libjunixsocket-linux-1.5-amd64.so /opt/newsclub/lib-native
+
+and run by using leiningen.
+
+    $ cd protocol-parser/http
+    $ lein deps
+    $ lein run [path_to_unix_domain_socket]
