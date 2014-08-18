@@ -73,7 +73,8 @@ and run by using leiningen.
 install dependencies
 
     $ sudo apt-get install mongodb nodejs
-    $ sudo npm install mongodb
+    $ cd protocol-parser/jstore
+    $ npm install mongodb
 
 run HTTP parser, and redirect to node.js
 
