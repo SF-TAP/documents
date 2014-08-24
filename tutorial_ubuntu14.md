@@ -12,7 +12,7 @@ install build-essential, cmake, git, libevent-dev, libboost-all-dev, libpcap-dev
 
 clone flow-abstractor from GitHub
 
-    $ git clone git clone https://github.com/stap-project/flow-abstractor.git
+    $ git clone git clone https://github.com/SF-TAP/flow-abstractor.git
 
 ### Build
 
@@ -30,7 +30,7 @@ if you got an eorror regarding language locale, install suitable launguage pack
 
 run specifying a network interface and config file
 
-    $ sudo ./src/stap_fabs -i eth0 -c ./examples/fabs.conf
+    $ sudo ./src/sf-tap_fabs -i eth0 -c ./examples/fabs.conf
 
 ## Build and Run Protocol Parser
 
@@ -38,7 +38,7 @@ run specifying a network interface and config file
 
 clone protocol-parser from GitHub
 
-    $ git clone https://github.com/stap-project/protocol-parser.git
+    $ git clone https://github.com/SF-TAP/protocol-parser.git
 
 ### Build and Run DNS Parser
 
@@ -50,7 +50,7 @@ build by cmake and make
 
 and run.
 
-    $ sudo ./stap_dns -j
+    $ sudo ./sf-tap_dns -j
 
 ### Build and Run HTTP Parser
 
@@ -90,4 +90,4 @@ show result
 of course, DNS parser's output can be stored into MongoDB
 
     $ cd protocol-parser/dns
-    $ ./stap_dns -j | node ../jstore/jstore.js test_db dns
+    $ ./sf-tap_dns -j | node ../jstore/jstore.js test_db dns

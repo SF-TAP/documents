@@ -12,7 +12,7 @@ install cmake, boost-all, git, libevent2
 
 clone flow-abstractor from GitHub
 
-    $ git clone git clone https://github.com/stap-project/flow-abstractor.git
+    $ git clone git clone https://github.com/SF-TAP/flow-abstractor.git
 
 ### Build
 
@@ -31,7 +31,7 @@ build by cmake and make
 
 run specifying a network interface and config file
 
-    $ sudo ./src/stap_fabs -i eth0 -c ./examples/fabs.conf
+    $ sudo ./src/sf-tap_fabs -i eth0 -c ./examples/fabs.conf
 
 ## Build and Run Protocol Parser
 
@@ -39,7 +39,7 @@ run specifying a network interface and config file
 
 clone protocol-parser from GitHub
 
-    $ git clone https://github.com/stap-project/protocol-parser.git
+    $ git clone https://github.com/sf-tap-project/protocol-parser.git
 
 ### Build
 
@@ -51,4 +51,4 @@ build by cmake and make
 
 ### Run
 
-    $ sudo ./stap_dns
+    $ sudo ./sf-tap_dns

@@ -2,8 +2,8 @@
 
 ### Installation
 
-* [Ubuntu 14.04.01](https://github.com/stap-project/documents/blob/master/tutorial_ubuntu14.md)
-* [FreeBSD 10](https://github.com/stap-project/documents/blob/master/tutorial_freebsd10.md)
+* [Ubuntu 14.04.01](https://github.com/SF-TAP/documents/blob/master/tutorial_ubuntu14.md)
+* [FreeBSD 10](https://github.com/SF-TAP/documents/blob/master/tutorial_freebsd10.md)
 
 ## Configuration
 
