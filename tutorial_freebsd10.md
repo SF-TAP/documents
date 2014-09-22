@@ -12,7 +12,7 @@ install cmake, boost-all, git, libevent2
 
 clone flow-abstractor from GitHub
 
-    $ git clone git clone https://github.com/SF-TAP/flow-abstractor.git
+    $ git clone https://github.com/SF-TAP/flow-abstractor.git
 
 ### Build
 
