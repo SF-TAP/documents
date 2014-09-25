@@ -62,24 +62,25 @@ install dependencies
     $ sudo mkdir -p /opt/newsclub/lib-native
     $ sudo cp linux/libjunixsocket-linux-1.5-amd64.so /opt/newsclub/lib-native
 
-and run by using leiningen.
+and run.
 
     $ cd protocol-parser/http
     $ lein deps
-    $ lein run [path_to_unix_domain_socket]
+    $ lein uberjar
+    $ java -jar ./target/uberjar/http-0.1.0-sftap-standalone.jar /tmp/sf-tap/tcp/http
 
 ## Save Result into MongoDB
 
 install dependencies
 
     $ sudo apt-get install mongodb nodejs
-    $ cd protocol-parser/jstore
+    $ cd protocol-parser/mongostore
     $ npm install mongodb
 
-run HTTP parser, and redirect to node.js
+run HTTP parser, and redirect to mongostore
 
     $ cd protocol-parser/http
-    $ lein run | node ../jstore/jstore.js test_db http
+    $ lein run | node ../mongostore/mongostore.js test_db http
 
 show result
 
@@ -90,4 +91,21 @@ show result
 of course, DNS parser's output can be stored into MongoDB
 
     $ cd protocol-parser/dns
-    $ ./sf-tap_dns -j | node ../jstore/jstore.js test_db dns
+    $ ./sf-tap_dns -j | node ../mongostore/mongostore.js test_db dns
+
+## Save Result into Redis
+
+build redistore
+
+    $ cd protocol-parser/redistore
+    $ lein deps
+    $ lein uberjar
+
+run HTTP parser, and redirect to redistore
+
+    $ java -jar ./target/uberjar/http-0.1.0-sftap-standalone.jar /tmp/sf-tap/tcp/http | java -jar ../http/target/uberjar/http-0.1.0-sftap-standalone.jar /tmp/sf-tap/tcp/http|java -jar ./target/uberjar/redistore-0.1.0-sftap-standalone.jar http
+
+show result
+
+    $ redis-cli
+    127.0.0.1:6379> lrange "http" 0 -1
