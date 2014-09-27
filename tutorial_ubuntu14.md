@@ -95,6 +95,10 @@ of course, DNS parser's output can be stored into MongoDB
 
 ## Save Result into Redis
 
+install dependencies
+
+    $ sudo apt-get install redis-server redis-tools
+
 build redistore
 
     $ cd protocol-parser/redistore
