@@ -103,7 +103,7 @@ build redistore
 
 run HTTP parser, and redirect to redistore
 
-    $ java -jar ./target/uberjar/http-0.1.0-sftap-standalone.jar /tmp/sf-tap/tcp/http | java -jar ../http/target/uberjar/http-0.1.0-sftap-standalone.jar /tmp/sf-tap/tcp/http|java -jar ./target/uberjar/redistore-0.1.0-sftap-standalone.jar http
+    $ java -jar ./target/uberjar/http-0.1.0-sftap-standalone.jar /tmp/sf-tap/tcp/http | java -jar ./target/uberjar/redistore-0.1.0-sftap-standalone.jar http
 
 show result
 
