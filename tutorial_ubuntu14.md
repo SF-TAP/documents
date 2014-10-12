@@ -30,7 +30,7 @@ if you got an eorror regarding language locale, install suitable launguage pack
 
 run specifying a network interface and config file
 
-    $ sudo ./src/sf-tap_fabs -i eth0 -c ./examples/fabs.conf
+    $ sudo ./src/sftap_fabs -i eth0 -c ./examples/fabs.conf
 
 ## Build and Run Protocol Parser
 
