@@ -61,7 +61,7 @@ install dependencies
 and run.
 
     $ cd protocol-parser/http
-    $ python3 sftap_http
+    $ python3 sftap_http.py
 
 ## Save Result into MongoDB
 
@@ -74,7 +74,7 @@ install dependencies
 run HTTP parser, and redirect to mongostore
 
     $ cd protocol-parser/http
-    $ lein run | node ../mongostore/mongostore.js test_db http
+    $ python3 sftap_http.py | node ../mongostore/mongostore.js test_db http
 
 show result
 
@@ -85,7 +85,7 @@ show result
 of course, DNS parser's output can be stored into MongoDB
 
     $ cd protocol-parser/dns
-    $ ./sf-tap_dns -j | node ../mongostore/mongostore.js test_db dns
+    $ ./sftap_dns -j | node ../mongostore/mongostore.js test_db dns
 
 ## Save Result into Redis
 
