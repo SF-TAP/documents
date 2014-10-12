@@ -50,24 +50,18 @@ build by cmake and make
 
 and run.
 
-    $ sudo ./sf-tap_dns -j
+    $ sudo ./sftap_dns -j
 
 ### Build and Run HTTP Parser
 
 install dependencies
 
-    $ sudo apt-get install leiningen maven
-    $ cd protocol-parser/javaclass
-    $ ./install.sh
-    $ sudo mkdir -p /opt/newsclub/lib-native
-    $ sudo cp linux/libjunixsocket-linux-1.5-amd64.so /opt/newsclub/lib-native
+    $ sudo apt-get install python3
 
 and run.
 
     $ cd protocol-parser/http
-    $ lein deps
-    $ lein uberjar
-    $ java -jar ./target/uberjar/http-0.1.0-sftap-standalone.jar /tmp/sf-tap/tcp/http
+    $ python3 sftap_http
 
 ## Save Result into MongoDB
 
@@ -97,7 +91,7 @@ of course, DNS parser's output can be stored into MongoDB
 
 install dependencies
 
-    $ sudo apt-get install redis-server redis-tools
+    $ sudo apt-get install redis-server redis-tools leiningen
 
 build redistore
 
@@ -107,7 +101,7 @@ build redistore
 
 run HTTP parser, and redirect to redistore
 
-    $ java -jar ./target/uberjar/http-0.1.0-sftap-standalone.jar /tmp/sf-tap/tcp/http | java -jar ./target/uberjar/redistore-0.1.0-sftap-standalone.jar http
+    $ python3 ../http/sftap_http.py | java -jar ./target/uberjar/redistore-0.1.0-sftap-standalone.jar http
 
 show result
 
