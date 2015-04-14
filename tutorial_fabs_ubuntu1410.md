@@ -152,7 +152,7 @@ install dependencies
 run HTTP parser, and redirect to mongostore
 
     $ cd protocol-parser/http
-    $ python3 sftap_http.py | python3 ../mongostore/mongostore.py -d sftap -c http
+    $ sudo python3 sftap_http.py | python3 ../mongostore/mongostore.py -d sftap -c http
 
 access some HTTP servers, and show result
 
@@ -163,6 +163,92 @@ access some HTTP servers, and show result
 of course, outputs of DNS parser also can be stored into MongoDB
 
     $ cd protocol-parser/dns
-    $ ./sftap_dns | python3 ../mongostore/mongostore.py -d sftap -c dns
+    $ sudo ./sftap_dns | python3 ../mongostore/mongostore.py -d sftap -c dns
 
 ## Save Result into Elasticsearch and Visualize by Kibana
+
+install dependencies
+
+    $ sudo apt-get install openjdk-8-jdk curl
+    $ wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.5.1.deb
+    $ sudo dpkg -i elasticsearch-1.5.1.deb
+    $ sudo pip3 install elasticsearch
+
+run elasticsearch
+
+    $ sudo service elasticsearch start
+
+store results of HTTP parser into Elasticsearch
+
+    $ cd protocl-parser/http
+    $ sudo python3 sftap_http.py | python3 ../esstore/esstore.py -i sftap -t http
+
+download and run Kibana
+
+    $ wget https://download.elastic.co/kibana/kibana/kibana-4.0.2-linux-x64.tar.gz
+    $ tar xzfv kibana-4.0.2-linux-x64.tar.gz
+    $ cd kibana-4.0.2-linux-x64
+    $ ./bin/kibana
+
+update mapping
+
+```
+$ curl -XPUT 'http://localhost:9200/sftap/_mapping/http?ignore_conflicts=true' -d '{
+  "http" : {
+    "properties" : {
+      "client" : {
+        "properties" : {
+          "header" : {
+            "properties" : {
+              "host" : {
+                "type" : "string",
+                "index": "analyzed",
+                "analyzer" : "simple",
+                "fields" : {
+                  "raw" : {"type" : "string", "index" : "not_analyzed"}
+                }
+              },
+              "referer" : {
+                "type" : "string",
+                "index": "analyzed",
+                "analyzer" : "simple",
+                "fields" : {
+                  "raw" : {"type" : "string", "index" : "not_analyzed"}
+                }
+              }
+            }
+          },
+          "method" : {
+            "properties" : {
+              "uri" : {
+                "type" : "string",
+                "index" : "analyzed",
+                "analyzer" : "simple",
+                "fields" : {
+                  "raw" : {"type" : "string", "index" : "not_analyzed"}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}'
+```
+
+open Kibana's web page and setting up
+
+open http://localhost:5600/ and select an index and a key for timestamp
+
+![kibana01 kibana01](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/kibana01.png)
+
+visualize data like as follows
+
+![kibana02 kibana02](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/kibana02.png)
+
+![kibana03 kibana03](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/kibana03.png)
+
+of course, you can use dashboard
+
+![kibana04 kibana04](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/kibana04.png)
