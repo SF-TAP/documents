@@ -237,8 +237,6 @@ $ curl -XPUT 'http://localhost:9200/sftap/_mapping/http?ignore_conflicts=true' -
 }'
 ```
 
-open Kibana's web page and setting up
-
 open http://localhost:5600/ and select an index and a key for timestamp
 
 ![kibana01 kibana01](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/kibana01.png)
