@@ -2,7 +2,7 @@
 
 ## Install Dependencies
 
-install build-essential, cmake, git, libevent-dev, libboost-all-dev, libpcap-dev
+install build-essential, cmake, git, libevent-dev, libboost-all-dev, libpcap-dev, libre2-dev
 
     $ sudo apt-get install build-essential cmake git libevent-dev libboost-all-dev libpcap-dev libre2-dev
 
