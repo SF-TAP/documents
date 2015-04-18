@@ -7,7 +7,8 @@ It can deal with high-bandwidth network traffic becase of the scalable
 architecture.
 Furthermore, SF-TAP allows developers to easily implement
 L7-level traffic analyzers because of some abstractions.
-SF-TAP consists of 2 program, which are Flow Abstractor and Cell Incubator.
+SF-TAP provides 2 main components,
+which are Flow Abstractor and Cell Incubator.
 
 ### Flow Abstractor
 
@@ -29,6 +30,7 @@ which captures flows forwarded by Cell incubator.
 ## Installation and Tutorial
 
 1. [Install Flow Abstractor on Ubuntu 14.10, and Store and Visualize Data](https://github.com/SF-TAP/documents/blob/master/tutorial_fabs_ubuntu1410.md)
+2. [Install Cell Incubator on FreeBSD 10.1, and Cooperates with Flow Abstractor](https://github.com/SF-TAP/documents/blob/master/tutorial_qb_freebsd101.md)
 
 ## Configuration of Flow Abstractor
 
