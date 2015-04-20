@@ -22,15 +22,16 @@ Accordingly, developers can implement L7-level analyzers by accessing the files.
 ### Cell Incubator
 
 Cell Incubator is a software-based network flow separator.
-It captures network traffic via a NIC by netmap, separates and forwards flows to
-other multiple NICs for high-bandwidth L7-level network traffic analysis.
+It captures network traffic from one or two NIC(s),
+separates and forwards flows to other multiple NICs
+for high-bandwidth L7-level network traffic analysis.
 Accordingly, analysis can be performed on multiple servers,
-which captures flows forwarded by Cell incubator.
+which capture flows forwarded by Cell incubator.
 
 ## Installation and Tutorial
 
 1. [Install Flow Abstractor on Ubuntu 14.10, and Store and Visualize Data](https://github.com/SF-TAP/documents/blob/master/tutorial_fabs_ubuntu1410.md)
-2. [Install Cell Incubator on FreeBSD 10.1, and Cooperates with Flow Abstractor](https://github.com/SF-TAP/documents/blob/master/tutorial_qb_freebsd101.md)
+2. [Install Cell Incubator on FreeBSD 10.1, and Cooperate with Flow Abstractor](https://github.com/SF-TAP/documents/blob/master/tutorial_qb_freebsd101.md)
 
 ## Configuration of Flow Abstractor
 

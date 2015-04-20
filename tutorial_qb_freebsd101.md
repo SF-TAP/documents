@@ -1,4 +1,4 @@
-# Install Cell Incubator on FreeBSD 10.1, and Cooperates with Flow Abstractor
+# Install Cell Incubator on FreeBSD 10.1, and Cooperate with Flow Abstractor
 
 ## Network Topology
 
