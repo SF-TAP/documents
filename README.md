@@ -3,11 +3,11 @@
 ## What?
 
 SF-TAP is a platform for L7-level network traffic analysis.
-It can deal with high-bandwidth network traffic becase of the scalable
+It can deal with high-bandwidth network traffic because of the scalable
 architecture.
 Furthermore, SF-TAP allows developers to easily implement
 L7-level traffic analyzers because of some abstractions.
-SF-TAP provides 2 main components,
+SF-TAP provides two main components,
 which are Flow Abstractor and Cell Incubator.
 
 ### Flow Abstractor
@@ -25,7 +25,7 @@ Cell Incubator is a software-based network flow separator.
 It captures network traffic from one or two NIC(s),
 separates and forwards flows to other multiple NICs
 for high-bandwidth L7-level network traffic analysis.
-Accordingly, analysis can be performed on multiple servers,
+Accordingly, analyses can be performed on multiple servers,
 which capture flows forwarded by Cell incubator.
 
 ## Installation and Tutorial
