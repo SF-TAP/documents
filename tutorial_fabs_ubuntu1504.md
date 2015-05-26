@@ -1,4 +1,4 @@
-# Install Flow Abstractor on Ubuntu 14.10, and Store and Visualize Data
+# Install Flow Abstractor on Ubuntu 15.04, and Store and Visualize Data
 
 ## Install Dependencies
 

@@ -30,7 +30,7 @@ which capture flows forwarded by Cell incubator.
 
 ## Installation and Tutorial
 
-1. [Install Flow Abstractor on Ubuntu 14.10, and Store and Visualize Data](https://github.com/SF-TAP/documents/blob/master/tutorial_fabs_ubuntu1410.md)
+1. [Install Flow Abstractor on Ubuntu 15.04, and Store and Visualize Data](https://github.com/SF-TAP/documents/blob/master/tutorial_fabs_ubuntu1504.md)
 2. [Install Cell Incubator on FreeBSD 10.1, and Cooperate with Flow Abstractor](https://github.com/SF-TAP/documents/blob/master/tutorial_qb_freebsd101.md)
 
 ## Configuration of Flow Abstractor
