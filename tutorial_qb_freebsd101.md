@@ -1,7 +1,5 @@
 # Install Cell Incubator on FreeBSD 10.1, and Cooperate with Flow Abstractor
 
-## Network Topology
-
 ## Build netmap Enabled Kernel
 
 edit kernel config
@@ -29,5 +27,33 @@ confirm
 
 ## Install Dependencies
 
-## Build and Run Cell Incubator
+install git
 
+    # pkg install git-2.3.5
+
+## Build Cell Incubator
+
+clone cell incubator form GitHUB
+
+    $ git clone https://github.com/SF-TAP/sf-incubator.git
+
+build
+
+    $ cd sf-incubator/src
+    $ make
+
+## Run Cell Incubator
+
+Before running, disable offload engine of NICs. The shell script included by the repository automatically disable offload engine of all NICs.
+
+    $ sudo ./misc/ifcap_disable.sh
+
+Here, suppose that we have a following FreeBSD box.
+
+![qb01 qb01](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb01.png)
+
+### Flow Separator
+
+### Mirroring
+
+### L2 Bridge
