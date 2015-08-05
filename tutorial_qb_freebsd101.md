@@ -60,6 +60,10 @@ Here, suppose that we have a following FreeBSD box.
 
 ![qb03 qb03](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb03.png)
 
-### L2 Bridging + Flow Separating
+### L2 Bridging
 
 ![qb04 qb04](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb03.png)
+
+### L2 Bridging + Flow Separating
+
+![qb05 qb05](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb05.png)
