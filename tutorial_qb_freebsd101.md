@@ -52,7 +52,7 @@ Here, suppose that we have a following FreeBSD box.
 
 ![qb01 qb01](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb01.png)
 
-### Flow Separating
+### Flow Based Separating
 
 ![qb02 qb02](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb02.png)
 
@@ -62,8 +62,12 @@ Here, suppose that we have a following FreeBSD box.
 
 ### L2 Bridging
 
-![qb04 qb04](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb03.png)
+![qb04 qb04](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb04.png)
 
-### L2 Bridging + Flow Separating
+### L2 Bridging + Flow Based Separating
 
 ![qb05 qb05](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb05.png)
+
+### L2 Bridging + Mirroring
+
+![qb06 qb06](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb06.png)
