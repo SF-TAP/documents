@@ -57,7 +57,7 @@ Here, suppose that we have a following FreeBSD box, which has two 10 GbE (ix0 an
 
 We can use qb-separator for traffic separating as follows.
 
-    $ ./qb-separator -r ix0 -t igb0,igb1,igb2,igb3
+    # ./qb-separator -r ix0 -t igb0,igb1,igb2,igb3
 
 ![qb02 qb02](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb02.png)
 
@@ -70,7 +70,7 @@ IP addresses and port numbers of captured packets.
 
 We can also use qb-tap for traffic mirroring as follows.
 
-    $ ./qb-tap -r ix0 -t igb0,igb1,igb2,igb3
+    # ./qb-tap -r ix0 -t igb0,igb1,igb2,igb3
 
 ![qb03 qb03](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb03.png)
 
@@ -80,7 +80,7 @@ Here, qb-tap forwards all captured traffic from ix0 to igb[0-3].
 
 We can use qb-separator or qb-tap as a simple software L2 bridge as follows.
 
-    $ ./qb-separator -r ix0 -l ix1
+    # ./qb-separator -r ix0 -l ix1
 
 -l is a prefix of "LEFT".
 
@@ -90,7 +90,7 @@ We can use qb-separator or qb-tap as a simple software L2 bridge as follows.
 
 We use qb-separator as a L2 bridge and traffic separator as follows.
 
-    $ ./qb-separator -r ix0 -l ix1 -t igb0,igb1,igb2,igb3
+    # ./qb-separator -r ix0 -l ix1 -t igb0,igb1,igb2,igb3
 
 ![qb05 qb05](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb05.png)
 
@@ -102,7 +102,7 @@ and forwards it to igb[0-3].
 
 Similarly, qb-tap can work as a L2 bridge and traffic mirroring box as follows.
 
-    $ ./qb-tap -r ix0 -l ix1 -t igb0,igb1,igb2,igb3
+    # ./qb-tap -r ix0 -l ix1 -t igb0,igb1,igb2,igb3
 
 ![qb06 qb06](https://raw.githubusercontent.com/SF-TAP/documents/master/pict/qb06.png)
 
