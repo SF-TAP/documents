@@ -56,6 +56,7 @@ Here, suppose that we have a following FreeBSD box, which has two 10 GbE (ix0 an
 ### Flow Based Separating
 
 We can use qb-separator for traffic separating as follows.
+qb-separator must be executed with root privilege.
 
     # ./qb-separator -r ix0 -t igb0,igb1,igb2,igb3
 
@@ -69,6 +70,7 @@ IP addresses and port numbers of captured packets.
 ### Mirroring
 
 We can also use qb-tap for traffic mirroring as follows.
+qb-tap also must be executed with root privilege.
 
     # ./qb-tap -r ix0 -t igb0,igb1,igb2,igb3
 
