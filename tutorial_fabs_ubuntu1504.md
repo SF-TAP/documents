@@ -182,7 +182,7 @@ run elasticsearch
 store results of HTTP parser into Elasticsearch
 
     $ cd protocl-parser/http
-    $ sudo python3 sftap_http.py | python3 ../esstore/esstore.py -i sftap -t http
+    $ sudo python3 sftap_http.py | python3 ../tools/esstore/esstore.py -i sftap -t http
 
 download and run Kibana
 
