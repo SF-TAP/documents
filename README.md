@@ -1,5 +1,8 @@
 # SF-TAP: Scalable and Flexible Traffic Analysis Platform
 
+These documents are obsoleted.
+Please see [http://sf-tap.github.io/](http://sf-tap.github.io/).
+
 ## References
 
 [SF-TAP: Scalable and Flexible Traffic Analysis Platform Running on Commodity Hardware (USENIX LISA 2015)](https://www.usenix.org/conference/lisa15/conference-program/presentation/takano)
